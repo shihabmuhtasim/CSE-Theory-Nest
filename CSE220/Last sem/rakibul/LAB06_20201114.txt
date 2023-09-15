@@ -1,0 +1,226 @@
+#1:
+#Selection Sort(Array):
+
+def searchminimum(l,i,j):
+    if i==j:
+        return i        
+    var=searchminimum(l,i+1,j)    
+    if l[i] < l[var]:
+      return i 
+    else:
+     return var
+def selectionsort(l,lth,trav):
+    if trav==lth:
+        return         
+    var=searchminimum(l,trav,lth-1)   
+    if var!=trav:
+        l[var], l[trav]=l[trav],l[var]       
+    selectionsort(l,lth,trav+1) 
+    return l   
+
+l1=[3, 1, 5, 2, 7, 0]
+print(selectionsort(l1,len(l1),0))
+
+#2:
+#Insertion Sort(Array):
+
+def insertionsort(l,i):
+  if i==0:
+    return
+  else:
+    insertionsort(l,i-1)
+    j=i-1
+    while j>0 and l[j-1]>l[j]:
+      l[j-1],l[j]=l[j],l[j-1]
+      j=j-1
+    return l
+
+l1=[1,5,2,6,3,9]
+print(insertionsort(l1,len(l1)))
+
+#3:
+#Bubble Sort(Singly Linked List):
+
+class Node:
+  def __init__(self,element,next):
+    self.element=element
+    self.next=next
+class SLL:
+  def __init__(self,a): 
+    self.a=a
+    self.head=None
+    tail=None
+    for i in a:
+      node=Node(i,None)
+      if self.head==None:
+        self.head=node
+        tail=node
+      else:
+        tail.next=node
+        tail=node
+  def bubblesort(self):
+    i=None
+    while i!=self.head.next:
+            trav=j=self.head
+            while j.next!=i:
+                trav2=j.next
+                if j.element>trav2.element:
+                    j.next=trav2.next
+                    trav2.next=j
+                    if j!=self.head:
+                        trav.next=trav2
+                    else:
+                        self.head=trav2
+                    j,trav2=trav2,j
+                trav=j
+                j=j.next
+            i=j
+    n1=self.head
+    while n1!=None:
+      print(n1.element,"->",n1.next)
+      n1=n1.next
+    
+    
+
+
+
+a=[1,9,2,8,10,5,3,12]  
+l1=SLL(a)
+l1.bubblesort()
+
+#4:
+#Selection Sort(Singly Linked List):
+
+class Node:
+  def __init__(self,element,next):
+    self.element=element
+    self.next=next
+
+
+class SLL:
+  def __init__(self,a): 
+    self.a=a
+    self.head=None
+    tail=None
+    for i in a:
+      node=Node(i,None)
+      if self.head==None:
+        self.head=node
+        tail=node
+      else:
+        tail.next=node
+        tail=node
+  def selectionsort(self):
+    temp=self.head
+    while temp!=None:
+        min_node=temp
+        afterm=temp.next         
+        while afterm!=None:
+            if (min_node.element>afterm.element):
+                min_node=afterm
+            afterm=afterm.next    
+        s=temp.element
+        temp.element=min_node.element
+        min_node.element=s
+        temp=temp.next
+    n1=self.head
+    while n1!=None:
+      print(n1.element,"->",n1.next)
+      n1=n1.next
+
+
+
+
+a=[1,9,2,8,10,5,3,12]  
+l1=SLL(a)
+l1.selectionsort()
+
+#5:
+#Insertion Sort(Doubly Linked List):
+
+class Node:                  
+    def __init__(self,element,next,prev):
+        self.element=element
+        self.next=next
+        self.prev=prev
+class DLL:
+    def __init__(self,a):
+        self.a=a
+        self.head=None
+        tail=None
+        for i in a:
+            n=Node(i,None,None)
+            if self.head==None:
+                self.head=n
+                tail=n
+            else:
+                tail.next=n
+                n.prev=tail
+                tail=n
+    def insertionsort(self):
+     i=self.head.next
+     while i!=None:
+            v=i.element
+            j=i.prev
+            while j!=None and v<j.element:
+                j.next.element=j.element
+                if j.prev==None:
+                    j.element=v
+                    j=j.prev
+                else:              
+                  j=j.prev
+                  j.next.element=v
+            i=i.next
+    def showList(self):
+        n1=self.head
+        while n1!=None:
+            print(n1.element)
+            n1=n1.next
+   
+
+  
+
+a=[1,9,2,8,10,5,3,12]
+l1=DLL(a)
+l1.insertionsort()
+l1.showList()
+
+#6:
+#Binary Search:
+
+def BinarySearch(l,low,high,key):
+  f=False
+  if low<=high:
+    mid=(low+high)//2
+    if l[mid]==key:
+      return mid
+    elif key<l1[mid]:
+      mid=BinarySearch(l,low,mid-1,key)
+      return mid
+    elif key>l1[mid]:
+     mid=BinarySearch(l,mid+1,high,key)
+     return mid
+  else:
+    return "Key not found in the array"
+
+
+l1=[1,3,5,9,10,12,13,15]
+print(BinarySearch(l1,0,len(l1)-1,19))
+
+#7:
+#Fibonacci Series:
+
+
+def fib(n):
+  a=[]
+  a=[0]*num
+  if n==0 or n==1:
+    return n
+  if a[n]==0:
+    a[n]=fib(n-1)+fib(n-2)
+  return a[n]
+
+num=int(input("Enter the number: "))
+print("The fibonacci Sequence:")
+for i in range(num):
+   print(fib(i),end=" ")
