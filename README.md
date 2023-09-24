@@ -1,6 +1,6 @@
 # BracU_Theory_Materials
 
-This repository contains course materials for non-programming courses during my academic journey at BRAC University.
+This repository contains course materials for non-programming courses during my academic journey at BRAC University. Easiest way to get access is download zip off the whole repo and unzip what you need. 
 
 ## Course Descriptions
 
