@@ -1,0 +1,237 @@
+shihab.muhtasim@g.bracu.ac.bd
+Ilovemartingarrix@@11
+
+CSE 421 LAB1
+
+1. if same device connection:
+i) for router-router or router-pc:
+-use WAN serial DCE- serial port
+-use LAN crossover copper 
+If diffrent device router-switch
+use LAN copper straigth through
+LAN always - Fasteth
+
+
+2. Set up router console 
+use blue console cable from pc to router consol port
+pc- desktop-terminal -ok get router
+--
+for data viewing and not for config stuff- enter hash-user priviledge exce mode:
+Router>en
+Router#
+----
+Config mode: config t
+Router#config t
+----
+exit for going back: exit
+----
+reinstall router:
+Router#erase startup-config
+Router#reload
+----
+hostname: 
+Router(config)#hostname R1
+----
+Disable lookup (specific to Ip dns lookup disables):
+R1(config)#no ip domain-lookup
+----
+Undo: no command
+----
+execution mode password:R1(config)#enable secret cisco
+----
+Banner of the day:
+banner motd &----&
+----
+router console password:
+R1(config)#line console 0
+R1(config-line)#password cisco
+R1(config-line)#login
+
+router has 0-4 total 5 virtual lines/ports- set password:
+R1(config)#line vty 0 4
+R1(config-line)#password cisco
+R1(config-line)#login
+--service password-encryption
+
+Configure ip address of R1:
+serial port:
+
+R1(config)#interface serial 0/0/0
+R1(config-if)#ip address 192.168.2.1 255.255.255.0
+
+Fasteth port:
+R1(config-if)#int f0/0 
+R1(config-if)#ip address 192.168.1.1 255.255.255.0
+R1(config-if)#end
+
+SAVE:
+R1#copy run start
+
+clock rate: R1(config-if)#clock rate 64000
+
+Pc ip, subnet, default gateway config:
+desktop-ipconfig-fillup
+
+
+
+LAB 4:
+TASK 1: Ping tracert
+1. pc information: 
+4: C:\>ipconfig /all
+6: C:\>ipv6config /all
+
+2. ping destination ip, tracert destination ip
+
+3. see router status: 
+ip addresses of ports:
+R1#show ip interface brief 
+R3#show ipv6 interface brief
+
+list the networks to which the router is connected:
+show ip route 
+show ipv6 route
+
+Here L means lan networks and C means WAN
+
+TASK2: troubleshoot
+ssh mode from pc CLI to config router:
+ssh -l Admin01 172.16.1.1
+shh -l username default-gateway-port-of-router
+using blue wire, just go to terminal.
+
+
+TASK3:
+Using NAT dynamic- one public ip serve many private
+Configure in R2 router --
+1. ACL- list: -ip access-list standard R2NAT
+
+2. define who can go outside R2- permit: permit 
+wildcard mask: host bit 0.0.0.255 for 8 host bits
+given ip/24; host bits 8; wildcard mask
+
+command: -permit 192.168.10.0 0.0.0.255
+
+3. privates need public address from router r2- NAT pool
+
+first address in the 209.165.202.128/30 address
+space means 209.165.202.129/30
+
+define public address pool:
+-ip nat pool R2POOL 209.165.202.129 209.165.202.129 netmask 255.255.255.252
+(range)
+
+4. Mapping :
+-ip nat inside source list R2NAT pool R2POOL overload
+
+5. find inside and outside ports from looking at figure. - outside- internet
+
+int s0/1/0
+ip nat outside
+
+int f0/0
+ip nat inside
+----
+Directly static NAT: directly get public ip
+
+-ip nat inside source static inside-add outside-add
+
+
+R2# show ip nat translations
+
+
+LAB 5:
+DHCP:
+1. Excluded address that are static like printer:
+ip dhcp excluded-address <start address> <end add>
+
+2. Create dhcp pool: ip dhcp pool POOLNAME
+
+3. Fill up pool: network <network address> <submet musk>  
+
+4. default gateway: default-router 192.168.10.1
+
+5. DNS server: dns-server <address>
+
+DHCP RELAY-got to lan router:lan router will block discover packet
+
+1. Enter relay interface- default gateway: int g0/0
+
+2. ip helper-address <ip address of dhcp server enter port>
+
+3. Config PC to retrive dhcp 
+
+DHCP server as DHCP client:
+1. enter unassigned port: int g0/1
+2. set ip by dhcp: ip address dhcp, no shut
+
+
+DHCP server- server-dhcp-service on-set up pool
+
+
+IP-
+Find remote networks for each routers
+recursive lookup: 
+ip route <address of remote network> <subnet> <next hop- hop to reach the remote network's ip>
+
+Directly attached:
+ip route <address of remote network> <subnet> <exit interface name of router>
+
+
+Default static route:
+ip route 0.0.0.0 0.0.0.0 <exit interface>
+
+Floating static route:
+to see floating route: show run
+
+Turn off a route: int s0/0/0, shutdown
+turn on: no shutdown
+
+IPv6 default: ipv6 route ::/0 <add  next hop> 5
+
+dynamic:
+router rip
+version 2
+no auto-summary
+
+broadcast advertise directly connected: 
+nertwork <direct add>
+
+passive port-so no info sent- no router where: passive-interface g0/0
+
+advertise internet connection:
+default-information originate
+
+copy run start
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

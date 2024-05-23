@@ -1,0 +1,178 @@
+shihab.muhtasim@g.bracu.ac.bd
+Ilovemartingarrix@@11
+
+LAB1
+----
+reinstall router:
+Router#erase startup-config
+Router#reload
+----
+Disable lookup:
+R1(config)#no ip domain-lookup
+----
+execution mode password:R1(config)#enable secret cisco
+----
+Banner of the day:
+banner motd &----&
+----
+router console password:
+R1(config)#line console 0
+R1(config-line)#password cisco
+R1(config-line)#login
+
+virtual lines password:
+R1(config)#line vty 0 4
+R1(config-line)#password cisco
+R1(config-line)#login
+
+
+Configure ip address of R1:
+R1(config)#interface serial 0/0/0
+R1(config-if)#ip address 192.168.2.1 255.255.255.0
+
+SAVE:
+R1#copy run start
+
+clock rate: R1(config-if)#clock rate 64000
+
+Pc ip, subnet, default gateway config:
+desktop-ipconfig-fillup
+
+
+
+LAB 4:
+TASK 1: Ping tracert
+1. pc information: 
+4: C:\>ipconfig /all
+6: C:\>ipv6config /all
+
+3. see router status: 
+ip addresses of ports:
+R1#show ip interface brief 
+R3#show ipv6 interface brief
+
+Router table:
+show ip route 
+show ipv6 route
+
+TASK2: troubleshoot
+ssh mode- PC cli to  router:
+ssh -l Admin01 172.16.1.1
+shh -l username <default-gateway-port-of-router>
+
+
+TASK3:
+Using NAT dynamic- one public ip serve many private Configure in R2 router --
+
+1. ACL- list: ip access-list standard R2NAT
+
+2. Permit:   need wildcard mask
+
+command: permit 192.168.10.0 0.0.0.255
+
+3. public address pool:
+-ip nat pool R2POOL <209.165.202.129> <209.165.202.129> netmask 255.255.255.252
+(range)
+
+4. Mapping : ip nat inside source list R2NAT pool R2POOL overload
+
+5. find inside and outside ports from looking at figure. - outside- internet
+
+int s0/1/0
+ip nat outside
+
+----
+Directly static NAT: ip nat inside source static inside-add outside-add
+
+
+R2# show ip nat translations
+
+
+LAB 5:
+DHCP:
+1. Excluded address: ip dhcp excluded-address <start address> <end add>
+
+2. Create dhcp pool: ip dhcp pool POOLNAME
+
+3. Fill up pool: network <network address> <submet musk>  
+
+4. default gateway: default-router 192.168.10.1
+
+5. DNS server: dns-server <address>
+
+DHCP RELAY:
+
+1. Enter relay interface- default gateway: int g0/0
+
+2. ip helper-address <ip address of dhcp server entrance port>
+
+3. Config PC to retrive dhcp 
+
+DHCP server as DHCP client:
+1. enter unassigned port: int g0/1
+2. set ip by dhcp: ip address dhcp, no shut
+
+
+IP-
+
+recursive lookup: 
+ip route <address of remote network> <subnet> <next hop- hop>
+
+Directly attached:
+ip route <address of remote network> <subnet> <exit interface>
+
+Default static route:
+ip route 0.0.0.0 0.0.0.0 <exit interface>
+
+Floating static route: show run
+
+Turn off a route: int s0/0/0, shutdown
+turn on: no shutdown
+
+IPv6 default: ipv6 route ::/0 <add next hop> 5
+
+dynamic:
+router rip
+version 2
+no auto-summary
+
+broadcast : nertwork <direct add>
+
+passive port: passive-interface g0/0
+
+advertise internet connection: default-information originate
+
+copy run start
+
+
+
+
+
+
+
+
+
+\
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
