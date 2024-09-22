@@ -1,0 +1,186 @@
+Line no 1: Token <INT> Lexeme int found
+
+Line no 1: Token <ID> Lexeme func found
+
+Line no 1: Token <LPAREN> Lexeme ( found
+
+Line no 1: Token <INT> Lexeme int found
+
+Line no 1: Token <ID> Lexeme var1 found
+
+Line no 1: Token <LTHIRD> Lexeme [ found
+
+Line no 1: Token <RTHIRD> Lexeme ] found
+
+Line no 1: Token <COMMA> Lexeme , found
+
+Line no 1: Token <FLOAT> Lexeme float found
+
+Line no 1: Token <ID> Lexeme var3 found
+
+Line no 1: Token <RPAREN> Lexeme ) found
+
+Line no 2: Token <LCURL> Lexeme { found
+
+Line no 3: Token <INT> Lexeme int found
+
+Line no 3: Token <ID> Lexeme a found
+
+Line no 3: Token <ASSIGNOP> Lexeme = found
+
+Line no 3: Token <CONST_INT> Lexeme 10 found
+
+Line no 3: Token <SEMICOLON> Lexeme ; found
+
+Line no 4: Token <FLOAT> Lexeme float found
+
+Line no 4: Token <ID> Lexeme b found
+
+Line no 4: Token <ASSIGNOP> Lexeme = found
+
+Line no 4: Token <CONST_FLOAT> Lexeme 1.56 found
+
+Line no 4: Token <SEMICOLON> Lexeme ; found
+
+Line no 5: Token <FLOAT> Lexeme float found
+
+Line no 5: Token <ID> Lexeme c found
+
+Line no 5: Token <ASSIGNOP> Lexeme = found
+
+Line no 5: Token <CONST_FLOAT> Lexeme 1.56e-4 found
+
+Line no 5: Token <SEMICOLON> Lexeme ; found
+
+Line no 6: Token <FLOAT> Lexeme float found
+
+Line no 6: Token <ID> Lexeme d found
+
+Line no 6: Token <ASSIGNOP> Lexeme = found
+
+Line no 6: Token <CONST_FLOAT> Lexeme 0.56 found
+
+Line no 6: Token <SEMICOLON> Lexeme ; found
+
+Line no 7: Token <FLOAT> Lexeme float found
+
+Line no 7: Token <ID> Lexeme e found
+
+Line no 7: Token <ASSIGNOP> Lexeme = found
+
+Line no 7: Token <CONST_FLOAT> Lexeme 0.56e5 found
+
+Line no 7: Token <SEMICOLON> Lexeme ; found
+
+Line no 9: Token <IF> Lexeme if found
+
+Line no 9: Token <LPAREN> Lexeme ( found
+
+Line no 9: Token <ID> Lexeme a found
+
+Line no 9: Token <RELOP> Lexeme > found
+
+Line no 9: Token <ID> Lexeme b found
+
+Line no 9: Token <RPAREN> Lexeme ) found
+
+Line no 10: Token <LCURL> Lexeme { found
+
+Line no 11: Token <PRINTF> Lexeme printf found
+
+Line no 11: Token <LPAREN> Lexeme ( found
+
+Line no 11: Token <ID> Lexeme a found
+
+Line no 11: Token <RPAREN> Lexeme ) found
+
+Line no 11: Token <SEMICOLON> Lexeme ; found
+
+Line no 12: Token <RCURL> Lexeme } found
+
+Line no 13: Token <ELSE> Lexeme else found
+
+Line no 13: Token <IF> Lexeme if found
+
+Line no 13: Token <LPAREN> Lexeme ( found
+
+Line no 13: Token <ID> Lexeme c found
+
+Line no 13: Token <RELOP> Lexeme < found
+
+Line no 13: Token <ID> Lexeme d found
+
+Line no 13: Token <RPAREN> Lexeme ) found
+
+Line no 14: Token <LCURL> Lexeme { found
+
+Line no 15: Token <PRINTF> Lexeme printf found
+
+Line no 15: Token <LPAREN> Lexeme ( found
+
+Line no 15: Token <ID> Lexeme b found
+
+Line no 15: Token <RPAREN> Lexeme ) found
+
+Line no 15: Token <SEMICOLON> Lexeme ; found
+
+Line no 16: Token <RCURL> Lexeme } found
+
+Line no 17: Token <ELSE> Lexeme else found
+
+Line no 18: Token <LCURL> Lexeme { found
+
+Line no 19: Token <PRINTF> Lexeme printf found
+
+Line no 19: Token <LPAREN> Lexeme ( found
+
+Line no 19: Token <ID> Lexeme b found
+
+Line no 19: Token <RPAREN> Lexeme ) found
+
+Line no 19: Token <SEMICOLON> Lexeme ; found
+
+Line no 20: Token <RCURL> Lexeme } found
+
+Line no 22: Token <WHILE> Lexeme while found
+
+Line no 22: Token <LPAREN> Lexeme ( found
+
+Line no 22: Token <ID> Lexeme a found
+
+Line no 22: Token <RELOP> Lexeme <= found
+
+Line no 22: Token <CONST_INT> Lexeme 13 found
+
+Line no 22: Token <RPAREN> Lexeme ) found
+
+Line no 23: Token <LCURL> Lexeme { found
+
+Line no 24: Token <PRINTF> Lexeme printf found
+
+Line no 24: Token <LPAREN> Lexeme ( found
+
+Line no 24: Token <ID> Lexeme a found
+
+Line no 24: Token <RPAREN> Lexeme ) found
+
+Line no 24: Token <SEMICOLON> Lexeme ; found
+
+Line no 25: Token <ID> Lexeme a found
+
+Line no 25: Token <INCOP> Lexeme ++ found
+
+Line no 25: Token <SEMICOLON> Lexeme ; found
+
+Line no 26: Token <RCURL> Lexeme } found
+
+Line no 28: Token <RETURN> Lexeme return found
+
+Line no 28: Token <CONST_INT> Lexeme 0 found
+
+Line no 28: Token <SEMICOLON> Lexeme ; found
+
+Line no 29: Token <RCURL> Lexeme } found
+
+
+Total lines: 29

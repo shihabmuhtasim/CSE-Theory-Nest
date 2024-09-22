@@ -1,0 +1,9 @@
+1. Open gitbash. Navigate to the project folder.
+
+2. Run the following commands:
+
+	flex <lex_file_name>.l
+	g++ lex.yy.c -o <desired_file_name>
+	./<desired_file_name>.exe <input_file>
+
+3. The output should be present in the my_log.txt file in the same directory.
