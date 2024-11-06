@@ -1,0 +1,94 @@
+﻿#TASK 1
+class KeyIndex:
+ def __init__(self,a):
+    self.x=0
+    self.a=a
+    #max, min 
+    min=0
+    max=a[0]
+    for i in range(0,len(a)):
+      if a[i]>max:
+        max=a[i]
+      elif a[i]<min:
+        min=a[i]
+    if min>=0:
+      self.x=0
+    else:
+      self.x=min*(-1)
+    #initializing oxylary array
+    self.k=[0]*(self.x+max+1)
+    
+    for i in range(len(a)):
+        self.k[a[i]+self.x]+=1
+    print("Oxylary Array:",self.k)
+ def search(self, val):
+    if val<0 :
+      if val+self.x<0:
+        flag=False
+      else:
+        flag=True  
+    else:
+      if val+self.x>=len(self.k):
+        flag=False
+      else:
+        flag=True
+    if flag==True:    
+      new=self.k[val+self.x]
+      if new!=0:
+        print("Search Result:",val,'is in this array')
+      else:
+        flag=False
+    else:   
+      print("Search Result:",val,'is not present in this array')
+ def sort(self):
+    #initialize new array
+    sum=0
+    for i in range(len(self.k)):
+        if self.k[i]!=0:
+            sum+=self.k[i]
+    sort=[0]*(sum)
+    c=0
+    i=0
+    while c!=len(self.k):
+        if self.k[c]!=0:
+            sort[i]=c-self.x
+            self.k[c]-=1
+            i+=1
+        else:
+            c+=1
+    print("Sorted array:",sort)
+    
+a=[4,2,-3,7,6,7,2,5,7]
+j=KeyIndex(a)
+j.search(7)
+j.sort()
+
+
+
+
+#TASK 2
+def hashtable(array):
+    hash_table=[0]*9
+    i=0
+    while i<len(array):
+        sum_dig=0
+        con=0
+        j=0
+        store=array[i]
+        while j<len(store):
+            if store[j] not in "AEIOU":
+                con+=1 #consonant
+            if ord(array[i][j])<=57 and ord( array[i][j])>=48:
+                sum_dig+=int( array[i][j]) #numbers
+            j+=1
+        i+=1
+        func= (con*24+ sum_dig)%9
+        if hash_table[func]==0:
+            hash_table[func]=store
+        else:
+            while hash_table[func]!=0:
+                func=(func+1)%9
+            hash_table[func]=store
+    return hash_table
+arr=['ARB123', 'XYZ578', 'B3AR12', 'UV59WXYZ74', 'E2C54', 'VXGT418', "ST1E89B8A32", 'Q4SR56', 'ER240']
+print(hashtable(arr))

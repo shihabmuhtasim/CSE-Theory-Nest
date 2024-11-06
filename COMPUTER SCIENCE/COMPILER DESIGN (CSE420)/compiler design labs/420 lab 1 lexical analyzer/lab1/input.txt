@@ -1,0 +1,29 @@
+int func(int var1[], float var3)
+{
+    	int a = 10;
+    	float b = 1.56;
+	float c = 1.56e-4;
+	float d = 0.56;
+	float e = 0.56e5;
+	
+	if (a>b)
+	{
+	    printf(a);
+	}
+	else if (c<d)
+	{
+	    printf(b);
+	}
+	else
+	{
+	    printf(b);
+	}
+	
+	while (a <= 13)
+	{
+	    printf(a);
+	    a++;
+	}
+	
+	return 0;
+}

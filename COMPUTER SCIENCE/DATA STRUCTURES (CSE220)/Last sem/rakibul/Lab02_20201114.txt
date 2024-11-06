@@ -1,0 +1,163 @@
+#Task 1:
+class Node:
+  def __init__(self,element,ref):
+    self.element=element
+    self.ref=ref
+
+
+#Task 2:
+class MyList:
+  def __init__(self,a):    #1
+    self.a=a
+    self.head=None
+    tail=None
+    for i in a:
+      node=Node(i,None)
+      if self.head==None:
+        self.head=node
+        tail=node
+      else:
+        tail.ref=node
+        tail=node
+      
+  def showList(self): #2:
+    node=self.head
+    if self.head==None:
+      print("Empty")
+    else:
+      while node!=None:
+       print(node.element)
+       node=node.ref
+  def isEmpty(self):     #3
+    if self.a==None:
+      return True
+    else:
+      return False
+  def clear(self):         #4:
+       self.head=None
+  def insert(self,newElement):    #5:
+     newNode=Node(newElement,None)
+     if self.head==None:
+       self.head=newNode
+       tail=newNode
+     else:
+       if newElement in self.a:
+         print("The key already exists in the list")
+       else:
+         npoint=self.head
+         while npoint!=None:
+           npoint=npoint.ref
+         npoint.ref=newNode
+         tail=newNode
+  def insert2(self,newElement,index):  #6:
+    pointer=self.head
+    count=0
+    while pointer!=None:
+      if pointer.element==newElement:
+         print("the key already exists in the list")
+         return
+      count+=1
+      pointer=pointer.ref
+    if index<-4 or index>count-1:
+      print("Index invalid")
+    else:
+      newn=Node(newElement,None)
+      npoint2=self.head
+      for i in range(0,index-1):
+        npoint2=npoint2.ref
+      newn.element=newElement
+      newn.ref=npoint2.ref
+      npoint2.ref=newn
+      #print(newn.element)
+  def remove(self,deleteKey):  #7:
+    if deleteKey not in self.a:
+      print("Invalid Key")
+    else:
+      for i in range(0,len(self.a)):
+        if self.a[i]==deleteKey:
+          index=self.a[i]-1
+      #print(index)
+      point1=self.head.ref
+      point2=self.head
+      for j in range(1,index):
+        point1=point1.ref
+        point2=point2.ref
+      point2.ref=point1.ref
+      point1.ref=None
+      print(point1.element)
+
+  #Task 3:
+  #1:
+
+  
+  def even(self):    
+    newl=[]
+    pointer=self.head
+    while pointer!=None:
+      if pointer.element%2==0:
+        newl=newl+[pointer.element]
+      pointer=pointer.ref
+      #print(pointer.element)
+    #print(newl)
+    for i in range(len(newl)-1):
+      print(newl[i],"->",end="")
+    print(newl[-1])
+  #2:
+
+  def checklistelement(self,lt,num):
+    flag=True
+    b=self.head
+    while(b!=None):
+      if b.element==num:
+        flag=True
+      b=b.ref
+    if flag==True:
+      print("True")
+    else:
+      print("False")
+  #3:
+  
+
+  #def reverse(self,l):
+
+  #5:
+  def sum(self,lt):
+    point100=self.head
+    sum=0
+    while point100!=None:
+      print(point100.element)
+      point100=point100.ref
+
+  #6:
+  def rotate(self,lt6,p,k):
+   
+
+
+   
+    
+   
+    
+a=[10,20,30,40]
+b=[1,2,3,4]
+l1=MyList(a)
+l2=MyList(b)
+l1.showList()
+l1.isEmpty()
+l1.clear()
+l1.insert(50)
+l2.insert2(5,2)
+l2.remove(3)
+l3=MyList([101,120,25,91,87,1])
+l3.even()
+c=[1,2,5,3,8]
+l4=MyList(c)
+l4.checklistelement(c,6)
+# l5=MyList([1,2,5,3,8])
+# l5.reverse([1,2,5,3,8])
+d=[1,2,5,3,8]
+
+l7=MyList([d])
+l7.sum(d)
+e=[3,2,5,1]
+l8=MyList([e])
+l8.rotate(e,"left",2)

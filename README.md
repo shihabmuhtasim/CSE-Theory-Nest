@@ -1,65 +1,82 @@
 # BracU_Theory_Materials
 
-This repository contains course materials for non-programming courses during my academic journey at BRAC University. The easiest way to get access is to download the zip of the whole repo and unzip what you need. Else If you can use gitbash then you can clone exactly what you need. 
+This repository contains course materials for non-programming courses from my academic journey at BRAC University. You can access materials by downloading the zip file of the entire repository or cloning specific sections you need using Git Bash.
 
 ## Course Descriptions
 
-### SEMESTER: SUMMER 2021
+### Computer Science
+
 - **CSE110**: Programming Language I
-- **ENG102**: English Composition I
-- **MAT110**: Mathematics I: Differential Calculus & Coordinate Geometry
-- **PHY111**: Principles of Physics I
-
-### SEMESTER: FALL 2021
 - **CSE111**: Programming Language II
-- **CSE230**: Discrete Mathematics
-- **CSE260**: Digital Logic Design
-- **PHY112**: Principles of Physics II
 
-### SEMESTER: SPRING 2022
-- **BNG103**: Bangla Language and Literature
-- **EMB101**: Emergence of Bangladesh
-- **ENG103**: Advanced Writing and Presentation Skills
-- **HUM103**: Ethics and Culture
-
-### SEMESTER: SUMMER 2022
 - **CSE220**: Data Structures
-- **CSE250**: Circuits and Electronics
-- **HUM102**: Introduction to Philosophy
-- **MAT120**: Mathematics II: Integral Calculus & Differential Equations
-
-### SEMESTER: FALL 2022
 - **CSE221**: Algorithms
-- **CSE251**: Electronic Devices and Circuits
-- **MAT216**: Mathematics IV: Linear Algebra & Fourier Analysis
-- **STA201**: Elements of Statistics and Probability
+- **CSE230**: Discrete Mathematics
 
-### SEMESTER: SPRING 2023
 - **CSE320**: Data Communications
 - **CSE330**: Numerical Methods
-- **CSE370**: Database Systems
-- **ECO101**: Introduction to Microeconomics
-- **MAT215**: Mathematics III: Complex Variables & Laplace Transformations
-
-### SEMESTER: SUMMER 2023
-- **CHE101**: Introduction to Chemistry
 - **CSE331**: Automata and Computability
-- **CSE350**: Digital Electronics and Pulse Techniques
+- **CSE341**: Microprocessors
+- **CSE321**: Operating Systems
+- **CSE340**: Computer Architecture
+- **CSE341**: Microprocessors
+- **CSE370**: Database Systems
+
+- **CSE420**: Compiler Design
+- **CSE421**: Computer Networks
 - **CSE422**: Artificial Intelligence
+- **CSE423**: Computer Graphics
+- **CSE437**: Data Science: Coding with Real World Data
+- **CSE440**: Natural Language Processing II
+- **CSE460**: VLSI Design
+- **CSE470**: Software Engineering
 - **CSE471**: System Analysis and Design
 
-### SEMESTER: FALL 2023
-- **CSE341**: MICROPROCESSORS
-- **CSE423**: COMPUTER GRAPHICS
-- **CSE440**: NATURAL LANGUAGE PROCESSING II
-- **CSE470**: SOFTWARE ENGINEERING
-- **CST309**: GLOBAL CITIZENSHIP
-
-### SEMESTER: SPRING 2024
-- **CSE321**: OPERATING SYSTEMS
-- **CSE340**: COMPUTER ARCHITECTURE
-- **CSE421**: COMPUTER NETWORKS
-- **CSE461**: INTRODUCTION TO ROBOTICS
-- **HUM101**: WORLD CIVILIZATION AND CULTURE
 
 
+
+### Hardware Courses
+- **CSE250**: Circuits and Electronics
+- **CSE251**: Electronic Devices and Circuits
+
+- **CSE260**: Digital Logic Design
+
+- **CSE350**: Digital Electronics and Pulse Techniques
+- **CSE360**: Computer Interfacing
+
+- **CSE461**: Introduction to Robotics
+
+
+
+### Mathematics and Physics
+- **MAT110**: Mathematics I: Differential Calculus & Coordinate Geometry
+- **MAT120**: Mathematics II: Integral Calculus & Differential Equations
+- **MAT215**: Mathematics III: Complex Variables & Laplace Transformations
+- **MAT216**: Mathematics IV: Linear Algebra & Fourier Analysis
+
+- **STA201**: Elements of Statistics and Probability
+
+- **PHY111**: Principles of Physics I
+- **PHY112**: Principles of Physics II
+
+### Courses Outside Department (COD)
+- **ENG102**: English Composition I
+- **ENG103**: Advanced Writing and Presentation Skills
+
+- **ECO101**: Introduction to Microeconomics
+- **CHE101**: Introduction to Chemistry
+
+- **BNG103**: Bangla Language and Literature
+- **EMB101**: Emergence of Bangladesh
+
+- **HUM101**: World Civilization and Culture
+- **HUM103**: Ethics and Culture
+- **HUM102**: Introduction to Philosophy
+- **CST309**: Global Citizenship
+
+
+
+
+
+### Problem Solving
+This section contains Microsoft OneNote files that include my solves to problems across various courses.
