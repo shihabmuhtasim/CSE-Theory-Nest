@@ -87,7 +87,7 @@ This section contains Microsoft OneNote files that include my solves to problems
 ### Note
 
 If you found these materials helpful, you can show your appreciation by:
- - * Starring this repository
- - * Following me on GitHub
- - * Connecting with me on LinkedIn
+ * Starring this repository
+ * Following me on GitHub
+ * Connecting with me on LinkedIn
 Thank you!
