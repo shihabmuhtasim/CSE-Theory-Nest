@@ -89,6 +89,7 @@ This section contains Microsoft OneNote files that include my solves to problems
 If you found these materials helpful, you can show your appreciation by:
  * Starring this repository
  * Following me on GitHub
- * Connecting with me on [![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white)](https://linkedin.com/in/shihabmuhtasim) 
+ * Connecting with me on LinkedIn
+ [![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white)](https://linkedin.com/in/shihabmuhtasim) 
 
 Thank you!
