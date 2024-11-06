@@ -1,6 +1,6 @@
 # CSE THEORY NEST
 
-This repository contains CSE course materials for non-programming courses from my academic journey at BRAC University. You can access materials by downloading the zip file of the entire repository or cloning specific sections you need using different online tools.
+This repository contains the non-programming materials for CSE courses from my academic journey at BRAC University. You can access materials by downloading the zip file of the entire repository or cloning specific sections you need using different online tools.
 
 ![DALL·E 2024-11-06 20 38 19 - A sleek, modern design for a repository cover image with a dark theme  The image should feature abstract geometric shapes and digital elements to symb](https://github.com/user-attachments/assets/591ba957-d857-4016-afc9-6a2dce0e091b)
 
