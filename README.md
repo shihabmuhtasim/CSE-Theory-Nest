@@ -1,6 +1,6 @@
-# BracU_Theory_Materials
+# CSE THEORY NEST
 
-This repository contains course materials for non-programming courses from my academic journey at BRAC University. You can access materials by downloading the zip file of the entire repository or cloning specific sections you need using Git Bash.
+This repository contains course materials for non-programming courses from my academic journey at BRAC University majoring in CSE. You can access materials by downloading the zip file of the entire repository or cloning specific sections you need using Git Bash.
 
 ## Course Descriptions
 
